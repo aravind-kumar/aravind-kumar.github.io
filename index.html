@@ -105,25 +105,20 @@
 	      <ul>
                 <li>Improved write speed of the system to the database by <strong>80%</strong> by :
 		     <ul>
-                          <li>Removing bottlenecks caused by locks among different systems competing to write to a single database by parallelizing the writes from different sub-systems to its own individual databases.</li>
-                          <BR>
-                          <li>Improved the scalability of the system by integrating the pacemaker tool thereby adding the ability to add
-and/remove additional machines on the fly without loss of data and performance</li>
-                          <BR>
-                          <li>Reducing the number of write operations to storing results in memory and returning the stored result rather than re-computing the result for every request. </li>
-                          <BR>
-                          <li>Removed the bottleneck between the database thread and system thread by use of Lock-Less Ring Buffers as a
-form of communication between threads.</li>
-                          <BR>
-                          <li>Offloading serialization of data using Protocol Buffers from Main Thread to each of subsystems designated
-threads.</li>
+                          <li>Removing bottlenecks caused by locks among different systems competing to write to a single database by parallelizing the writes from different sub-systems to its own individual databases.<BR> </li>
+                          <li>Improved the <strong> scalability </strong> of the system by integrating the pacemaker tool thereby adding the ability to add
+and/remove additional machines on the fly without loss of data and performance <BR> </li>
+                          <li>Reducing the number of write operations to storing results in memory and returning the stored result rather than re-computing the result for every request. <BR> </li>
+                          <li>Removed the bottleneck between the database thread and system thread by use of <strong>Lock-Less Ring Buffers </strong> as a form of communication between threads. <BR>
+                          </li>
+                          <li>Offloading serialization of data using <strong>Protocol Buffers </strong> from Main Thread to each of subsystems designated threads.<BR> </li>
                      </ul>
                  </li>
                  <li>Implemented Batch-Reads and On-Demand reads on the High-Availability System thus : 
                     <ul>
                       <li>Transforming the system from a read-only/write-only system to a simultaneous read-write system </li>
                       <li>Thereby reducing the downtime of the system in the event of a failure from <strong>3-4hours to 0
-(> 95% improvement). </strong></li>
+(> 95% improvement). </strong><BR></li>
                     <ul> 
                  </li>
    		<li>Implemented data mirroring in real time (Hot-Standby) with the backup system which enables to read and/or recover rows on the fly from the primary system without any downtime resulting in <strong>50% reduction in downtime </strong> in the event of a failure</li>
