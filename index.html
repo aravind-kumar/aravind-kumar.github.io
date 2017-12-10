@@ -107,12 +107,15 @@
 		     <ul>
                           <li>Removing bottlenecks caused by locks among different systems competing to write to a single database by parallelizing the writes from different sub-systems to its own individual databases.<br/> </li>
     			  </br>
-                          <li>Improved the <strong> scalability </strong> of the system by integrating the pacemaker tool thereby adding the ability to add
-and/remove additional machines on the fly without loss of data and performance <br/> </li>
+                          <li>Improved the <strong> scalability </strong> of the system by integrating the pacemaker tool thereby adding the ability to add and/remove additional machines on the fly without loss of data and performance <br/> </li>
+			  </br>
                           <li>Reducing the number of write operations to storing results in memory and returning the stored result rather than re-computing the result for every request. <br/> </li>
+                          </br>
                           <li>Removed the bottleneck between the database thread and system thread by use of <strong>Lock-Less Ring Buffers </strong> as a form of communication between threads. <br/>
                           </li>
+                          </br>
                           <li>Offloading serialization of data using <strong>Protocol Buffers </strong> from Main Thread to each of subsystems designated threads.<br/> </li>
+ 			  </br>
                      </ul>
                  </li>
                  <li>Implemented Batch-Reads and On-Demand reads on the High-Availability System thus : 
